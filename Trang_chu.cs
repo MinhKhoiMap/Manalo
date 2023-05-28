@@ -16,5 +16,6 @@ namespace DOAAn
         {
             InitializeComponent();
         }
+        //sao khong có gì
     }
 }
