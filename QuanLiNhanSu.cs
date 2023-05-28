@@ -127,5 +127,10 @@ namespace DOAAn
             OpenChildForm(new Phanconggiangvien());
 
         }
+
+        private void QuanLiNhanSu_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

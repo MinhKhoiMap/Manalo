@@ -28,100 +28,106 @@
         /// </summary>
         private void InitializeComponent()
         {
-            panelMenu = new Panel();
-            iconButton3 = new FontAwesome.Sharp.IconButton();
-            iconButton2 = new FontAwesome.Sharp.IconButton();
-            iconButton1 = new FontAwesome.Sharp.IconButton();
-            panelDesktop = new Panel();
-            panelMenu.SuspendLayout();
-            SuspendLayout();
+            this.panelMenu = new System.Windows.Forms.Panel();
+            this.iconButton3 = new FontAwesome.Sharp.IconButton();
+            this.iconButton2 = new FontAwesome.Sharp.IconButton();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.panelDesktop = new System.Windows.Forms.Panel();
+            this.panelMenu.SuspendLayout();
+            this.SuspendLayout();
             // 
             // panelMenu
             // 
-            panelMenu.BackColor = Color.White;
-            panelMenu.Controls.Add(iconButton3);
-            panelMenu.Controls.Add(iconButton2);
-            panelMenu.Controls.Add(iconButton1);
-            panelMenu.Dock = DockStyle.Left;
-            panelMenu.Location = new Point(0, 0);
-            panelMenu.Name = "panelMenu";
-            panelMenu.Size = new Size(400, 915);
-            panelMenu.TabIndex = 0;
+            this.panelMenu.BackColor = System.Drawing.Color.White;
+            this.panelMenu.Controls.Add(this.iconButton3);
+            this.panelMenu.Controls.Add(this.iconButton2);
+            this.panelMenu.Controls.Add(this.iconButton1);
+            this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelMenu.Location = new System.Drawing.Point(0, 0);
+            this.panelMenu.Margin = new System.Windows.Forms.Padding(2);
+            this.panelMenu.Name = "panelMenu";
+            this.panelMenu.Size = new System.Drawing.Size(246, 572);
+            this.panelMenu.TabIndex = 0;
             // 
             // iconButton3
             // 
-            iconButton3.Dock = DockStyle.Top;
-            iconButton3.FlatAppearance.BorderSize = 0;
-            iconButton3.FlatStyle = FlatStyle.Flat;
-            iconButton3.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            iconButton3.IconChar = FontAwesome.Sharp.IconChar.None;
-            iconButton3.IconColor = Color.Black;
-            iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton3.Location = new Point(0, 204);
-            iconButton3.Name = "iconButton3";
-            iconButton3.Size = new Size(400, 102);
-            iconButton3.TabIndex = 2;
-            iconButton3.Text = "Nhom (3)";
-            iconButton3.TextAlign = ContentAlignment.MiddleLeft;
-            iconButton3.UseVisualStyleBackColor = true;
-            iconButton3.Click += iconButton3_Click;
+            this.iconButton3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.iconButton3.FlatAppearance.BorderSize = 0;
+            this.iconButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton3.Font = new System.Drawing.Font("Segoe UI Black", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.iconButton3.IconColor = System.Drawing.Color.Black;
+            this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton3.Location = new System.Drawing.Point(0, 128);
+            this.iconButton3.Margin = new System.Windows.Forms.Padding(2);
+            this.iconButton3.Name = "iconButton3";
+            this.iconButton3.Size = new System.Drawing.Size(246, 64);
+            this.iconButton3.TabIndex = 2;
+            this.iconButton3.Text = "Nhom (3)";
+            this.iconButton3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton3.UseVisualStyleBackColor = true;
+            this.iconButton3.Click += new System.EventHandler(this.iconButton3_Click_1);
             // 
             // iconButton2
             // 
-            iconButton2.Dock = DockStyle.Top;
-            iconButton2.FlatAppearance.BorderSize = 0;
-            iconButton2.FlatStyle = FlatStyle.Flat;
-            iconButton2.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            iconButton2.IconChar = FontAwesome.Sharp.IconChar.None;
-            iconButton2.IconColor = Color.Black;
-            iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton2.Location = new Point(0, 102);
-            iconButton2.Name = "iconButton2";
-            iconButton2.Size = new Size(400, 102);
-            iconButton2.TabIndex = 1;
-            iconButton2.Text = "Nhom (2)";
-            iconButton2.TextAlign = ContentAlignment.MiddleLeft;
-            iconButton2.UseVisualStyleBackColor = true;
-            iconButton2.Click += iconButton2_Click;
+            this.iconButton2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.iconButton2.FlatAppearance.BorderSize = 0;
+            this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton2.Font = new System.Drawing.Font("Segoe UI Black", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.iconButton2.IconColor = System.Drawing.Color.Black;
+            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton2.Location = new System.Drawing.Point(0, 64);
+            this.iconButton2.Margin = new System.Windows.Forms.Padding(2);
+            this.iconButton2.Name = "iconButton2";
+            this.iconButton2.Size = new System.Drawing.Size(246, 64);
+            this.iconButton2.TabIndex = 1;
+            this.iconButton2.Text = "Nhom (2)";
+            this.iconButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton2.UseVisualStyleBackColor = true;
+            this.iconButton2.Click += new System.EventHandler(this.iconButton2_Click_1);
             // 
             // iconButton1
             // 
-            iconButton1.Dock = DockStyle.Top;
-            iconButton1.FlatAppearance.BorderSize = 0;
-            iconButton1.FlatStyle = FlatStyle.Flat;
-            iconButton1.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            iconButton1.IconChar = FontAwesome.Sharp.IconChar.None;
-            iconButton1.IconColor = Color.Black;
-            iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton1.Location = new Point(0, 0);
-            iconButton1.Name = "iconButton1";
-            iconButton1.Size = new Size(400, 102);
-            iconButton1.TabIndex = 0;
-            iconButton1.Text = "Nhom (1)";
-            iconButton1.TextAlign = ContentAlignment.MiddleLeft;
-            iconButton1.UseVisualStyleBackColor = true;
-            iconButton1.Click += iconButton1_Click;
+            this.iconButton1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.iconButton1.FlatAppearance.BorderSize = 0;
+            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton1.Font = new System.Drawing.Font("Segoe UI Black", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.iconButton1.IconColor = System.Drawing.Color.Black;
+            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton1.Location = new System.Drawing.Point(0, 0);
+            this.iconButton1.Margin = new System.Windows.Forms.Padding(2);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Size = new System.Drawing.Size(246, 64);
+            this.iconButton1.TabIndex = 0;
+            this.iconButton1.Text = "Nhom (1)";
+            this.iconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton1.UseVisualStyleBackColor = true;
+            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click_1);
             // 
             // panelDesktop
             // 
-            panelDesktop.Dock = DockStyle.Fill;
-            panelDesktop.Location = new Point(400, 0);
-            panelDesktop.Name = "panelDesktop";
-            panelDesktop.Size = new Size(1444, 915);
-            panelDesktop.TabIndex = 1;
+            this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelDesktop.Location = new System.Drawing.Point(246, 0);
+            this.panelDesktop.Margin = new System.Windows.Forms.Padding(2);
+            this.panelDesktop.Name = "panelDesktop";
+            this.panelDesktop.Size = new System.Drawing.Size(889, 572);
+            this.panelDesktop.TabIndex = 1;
             // 
             // PhanQuyen
             // 
-            AutoScaleDimensions = new SizeF(13F, 32F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1844, 915);
-            Controls.Add(panelDesktop);
-            Controls.Add(panelMenu);
-            Name = "PhanQuyen";
-            Text = "PhanQuyen";
-            Load += PhanQuyen_Load;
-            panelMenu.ResumeLayout(false);
-            ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(1135, 572);
+            this.Controls.Add(this.panelDesktop);
+            this.Controls.Add(this.panelMenu);
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Name = "PhanQuyen";
+            this.Text = "PhanQuyen";
+            this.panelMenu.ResumeLayout(false);
+            this.ResumeLayout(false);
+
         }
 
         #endregion

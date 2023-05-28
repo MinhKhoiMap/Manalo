@@ -65,15 +65,16 @@ namespace DOAAn
                 /*cập nhật cho chuỗi connect tương đương quyền cho người dùng sau khi đăng nhập*/
                 label_Loi.Hide();
                 this.Hide();
+                /*Đóng form đăng nhập*/
                 string old = DataProvider.Instance.old();
                 DataProvider.Instance.ChangeString(TempRight.Connect); 
-                
-             FormMain2 formChinh = new FormMain2();
+                /*mở form chính*/
+            FormChinh formChinh = new FormChinh(TempRight);
                 formChinh.ShowDialog();
                 DataProvider.Instance.ChangeString(old);
                 this.Show();
             }
-            else { label_Loi.Show(); }
+            else { label_Loi.Show();/*báo lỗi khi sai pass*/ }
 
         }
 
