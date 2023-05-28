@@ -101,22 +101,29 @@ namespace DOAAn
 
         }
 
-        private void iconButton1_Click(object sender, EventArgs e)
+    
+
+      
+
+       
+
+        private void iconButton1_Click_1(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color1);
             OpenChildForm(new Nhom_1_());
         }
 
-        private void iconButton2_Click(object sender, EventArgs e)
+        private void iconButton2_Click_1(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color2);
             OpenChildForm(new Nhom_2_());
         }
 
-        private void iconButton3_Click(object sender, EventArgs e)
+        private void iconButton3_Click_1(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color3);
-            OpenChildForm(new Nhom_3_());
+            OpenChildForm(new Nhom3Grid());
+
         }
     }
 }

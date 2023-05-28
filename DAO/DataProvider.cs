@@ -9,7 +9,7 @@ using System.Configuration;
 
 
 namespace DOAAn
-{
+{/*Dùng để gọi dữ liệu xuống database, thường trả về 1 dataset*/
     public class DataProvider
     {
         private static DataProvider instance;

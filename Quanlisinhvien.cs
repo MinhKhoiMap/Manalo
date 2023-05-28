@@ -100,28 +100,18 @@ namespace DOAAn
 
         }
 
-        private void iconButton1_Click(object sender, EventArgs e)
+     
+        private void iconButton1_Click_1(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color1);
             OpenChildForm(new Danhsachsinhvien());
         }
 
-        private void iconButton2_Click(object sender, EventArgs e)
+        private void iconButton2_Click_1(object sender, EventArgs e)
         {
-            ActivateButton(sender,RGBColors.color2);
+
+            ActivateButton(sender, RGBColors.color2);
             OpenChildForm(new Diemsosinhvien());
-        }
-
-        private void iconButton3_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender, RGBColors.color3);
-            OpenChildForm(new Taichinhvien());
-        }
-
-        private void iconButton4_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender, RGBColors.color4);
-            OpenChildForm(new Quyetdinhsinhvien());
         }
     }
 }
