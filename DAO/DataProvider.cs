@@ -85,12 +85,43 @@ namespace DOAAn
                         }
                     }
                 }
+                
                 data = command.ExecuteNonQuery();
+                 
                 connection.Close();
                 SqlDataAdapter adapter = new SqlDataAdapter(command);
 
             }
             return data;
+        }
+        public void ExecuteNonQueryNoResult(string query, object[] para = null)
+        {
+            int data = 0;
+            using (SqlConnection connection = new SqlConnection(path))
+            {
+                connection.Open();
+                SqlCommand command = new SqlCommand(query, connection);
+                if (para != null)
+                {
+                    string[] list = query.Split(' ');
+                    int l = 0;
+                    foreach (var i in list)
+                    {
+                        if (i.Contains('@'))
+                        {
+                            command.Parameters.AddWithValue(i, para[l]);
+                            l++;
+                        }
+                    }
+                }
+
+                command.ExecuteNonQuery();
+
+                connection.Close();
+              
+
+            }
+           
         }
         public object ExecuteScalar(string query, object[] para = null)
         {

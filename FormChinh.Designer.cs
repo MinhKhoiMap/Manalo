@@ -42,6 +42,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panelDesktop = new System.Windows.Forms.Panel();
+            this.button6 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.circlePictureBox1)).BeginInit();
@@ -125,6 +126,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Teal;
+            this.panel2.Controls.Add(this.button6);
             this.panel2.Controls.Add(this.button5);
             this.panel2.Controls.Add(this.button4);
             this.panel2.Controls.Add(this.button3);
@@ -144,12 +146,12 @@
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Segoe UI Black", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(865, 0);
+            this.button5.Location = new System.Drawing.Point(679, 0);
             this.button5.Margin = new System.Windows.Forms.Padding(2);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(202, 49);
             this.button5.TabIndex = 4;
-            this.button5.Text = "Phan quyen";
+            this.button5.Text = "Tài khoản người dùng";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click_1);
             // 
@@ -160,10 +162,10 @@
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Segoe UI Black", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(613, 0);
+            this.button4.Location = new System.Drawing.Point(483, 0);
             this.button4.Margin = new System.Windows.Forms.Padding(2);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(252, 49);
+            this.button4.Size = new System.Drawing.Size(196, 49);
             this.button4.TabIndex = 3;
             this.button4.Text = "Nganh - chuyen nganh";
             this.button4.UseVisualStyleBackColor = true;
@@ -176,10 +178,10 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Segoe UI Black", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(396, 0);
+            this.button3.Location = new System.Drawing.Point(321, 0);
             this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(217, 49);
+            this.button3.Size = new System.Drawing.Size(162, 49);
             this.button3.TabIndex = 2;
             this.button3.Text = "Quan li sinh vien";
             this.button3.UseVisualStyleBackColor = true;
@@ -192,10 +194,10 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Segoe UI Black", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(176, 0);
+            this.button2.Location = new System.Drawing.Point(153, 0);
             this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(220, 49);
+            this.button2.Size = new System.Drawing.Size(168, 49);
             this.button2.TabIndex = 1;
             this.button2.Text = "Quan li nhan su";
             this.button2.UseVisualStyleBackColor = true;
@@ -211,7 +213,7 @@
             this.button1.Location = new System.Drawing.Point(0, 0);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(176, 49);
+            this.button1.Size = new System.Drawing.Size(153, 49);
             this.button1.TabIndex = 0;
             this.button1.Text = "Trang chu";
             this.button1.UseVisualStyleBackColor = true;
@@ -225,6 +227,22 @@
             this.panelDesktop.Name = "panelDesktop";
             this.panelDesktop.Size = new System.Drawing.Size(1184, 525);
             this.panelDesktop.TabIndex = 2;
+            // 
+            // button6
+            // 
+            this.button6.Dock = System.Windows.Forms.DockStyle.Left;
+            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Font = new System.Drawing.Font("Segoe UI Black", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button6.ForeColor = System.Drawing.Color.White;
+            this.button6.Location = new System.Drawing.Point(881, 0);
+            this.button6.Margin = new System.Windows.Forms.Padding(2);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(202, 49);
+            this.button6.TabIndex = 5;
+            this.button6.Text = "Phân quyền";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // FormChinh
             // 
@@ -265,5 +283,6 @@
         private ToolStripMenuItem logOutToolStripMenuItem;
         private ToolStripMenuItem informationToolStripMenuItem;
         private PictureBox pictureBox1;
+        private Button button6;
     }
 }
