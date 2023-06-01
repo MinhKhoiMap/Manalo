@@ -101,12 +101,12 @@ namespace DOAAn
 
         private void iconButton2_Click(object sender, EventArgs e)
         {
-         
+
         }
 
         private void iconButton1_Click(object sender, EventArgs e)
         {
-          
+
         }
 
         private void iconButton3_Click(object sender, EventArgs e)

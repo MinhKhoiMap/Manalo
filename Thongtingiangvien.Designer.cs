@@ -28,171 +28,177 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.GVienGrid = new System.Windows.Forms.DataGridView();
-            this.AddGVien = new System.Windows.Forms.Button();
-            this.UpdateGvien = new System.Windows.Forms.Button();
-            this.DeleGvien = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.GVienGrid)).BeginInit();
-            this.SuspendLayout();
+            GVienGrid = new DataGridView();
+            AddGVien = new Button();
+            UpdateGvien = new Button();
+            DeleGvien = new Button();
+            label5 = new Label();
+            label4 = new Label();
+            label2 = new Label();
+            label1 = new Label();
+            textBox6 = new TextBox();
+            textBox4 = new TextBox();
+            textBox2 = new TextBox();
+            textBox1 = new TextBox();
+            textBox3 = new TextBox();
+            label3 = new Label();
+            ((System.ComponentModel.ISupportInitialize)GVienGrid).BeginInit();
+            SuspendLayout();
             // 
             // GVienGrid
             // 
-            this.GVienGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.GVienGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.GVienGrid.Location = new System.Drawing.Point(-2, 0);
-            this.GVienGrid.Name = "GVienGrid";
-            this.GVienGrid.RowHeadersWidth = 51;
-            this.GVienGrid.RowTemplate.Height = 29;
-            this.GVienGrid.Size = new System.Drawing.Size(1146, 235);
-            this.GVienGrid.TabIndex = 0;
+            GVienGrid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            GVienGrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            GVienGrid.Location = new Point(-2, 0);
+            GVienGrid.Name = "GVienGrid";
+            GVienGrid.RowHeadersWidth = 51;
+            GVienGrid.RowTemplate.Height = 29;
+            GVienGrid.Size = new Size(1146, 235);
+            GVienGrid.TabIndex = 0;
             // 
             // AddGVien
             // 
-            this.AddGVien.Location = new System.Drawing.Point(279, 432);
-            this.AddGVien.Name = "AddGVien";
-            this.AddGVien.Size = new System.Drawing.Size(94, 29);
-            this.AddGVien.TabIndex = 1;
-            this.AddGVien.Text = "Thêm";
-            this.AddGVien.UseVisualStyleBackColor = true;
-            this.AddGVien.Click += new System.EventHandler(this.AddGVien_Click);
+            AddGVien.Location = new Point(279, 432);
+            AddGVien.Name = "AddGVien";
+            AddGVien.Size = new Size(94, 29);
+            AddGVien.TabIndex = 1;
+            AddGVien.Text = "Thêm";
+            AddGVien.UseVisualStyleBackColor = true;
+            AddGVien.Click += AddGVien_Click;
             // 
             // UpdateGvien
             // 
-            this.UpdateGvien.Location = new System.Drawing.Point(454, 432);
-            this.UpdateGvien.Name = "UpdateGvien";
-            this.UpdateGvien.Size = new System.Drawing.Size(94, 29);
-            this.UpdateGvien.TabIndex = 2;
-            this.UpdateGvien.Text = "Sửa";
-            this.UpdateGvien.UseVisualStyleBackColor = true;
-            this.UpdateGvien.Click += new System.EventHandler(this.UpdateGvien_Click);
+            UpdateGvien.Location = new Point(454, 432);
+            UpdateGvien.Name = "UpdateGvien";
+            UpdateGvien.Size = new Size(94, 29);
+            UpdateGvien.TabIndex = 2;
+            UpdateGvien.Text = "Sửa";
+            UpdateGvien.UseVisualStyleBackColor = true;
+            UpdateGvien.Click += UpdateGvien_Click;
             // 
             // DeleGvien
             // 
-            this.DeleGvien.Location = new System.Drawing.Point(622, 432);
-            this.DeleGvien.Name = "DeleGvien";
-            this.DeleGvien.Size = new System.Drawing.Size(94, 29);
-            this.DeleGvien.TabIndex = 3;
-            this.DeleGvien.Text = "Xóa";
-            this.DeleGvien.UseVisualStyleBackColor = true;
-            this.DeleGvien.Click += new System.EventHandler(this.DeleGvien_Click);
+            DeleGvien.Location = new Point(622, 432);
+            DeleGvien.Name = "DeleGvien";
+            DeleGvien.Size = new Size(94, 29);
+            DeleGvien.TabIndex = 3;
+            DeleGvien.Text = "Xóa";
+            DeleGvien.UseVisualStyleBackColor = true;
+            DeleGvien.Click += DeleGvien_Click;
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(443, 260);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(53, 20);
-            this.label5.TabIndex = 32;
-            this.label5.Text = "Email :";
+            label5.AutoSize = true;
+            label5.Location = new Point(574, 281);
+            label5.Name = "label5";
+            label5.Size = new Size(53, 20);
+            label5.TabIndex = 32;
+            label5.Text = "Email :";
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(396, 304);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(100, 20);
-            this.label4.TabIndex = 31;
-            this.label4.Text = "Số điện thoại:";
+            label4.AutoSize = true;
+            label4.Location = new Point(527, 325);
+            label4.Name = "label4";
+            label4.Size = new Size(100, 20);
+            label4.TabIndex = 31;
+            label4.Text = "Số điện thoại:";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(146, 304);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(61, 20);
-            this.label2.TabIndex = 29;
-            this.label2.Text = "Họ tên :";
+            label2.AutoSize = true;
+            label2.Location = new Point(277, 325);
+            label2.Name = "label2";
+            label2.Size = new Size(61, 20);
+            label2.TabIndex = 29;
+            label2.Text = "Họ tên :";
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(101, 250);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(106, 20);
-            this.label1.TabIndex = 28;
-            this.label1.Text = "Mã giảng viên:";
+            label1.AutoSize = true;
+            label1.Location = new Point(232, 271);
+            label1.Name = "label1";
+            label1.Size = new Size(106, 20);
+            label1.TabIndex = 28;
+            label1.Text = "Mã giảng viên:";
+            label1.Click += label1_Click;
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(502, 304);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(125, 27);
-            this.textBox6.TabIndex = 27;
+            textBox6.Location = new Point(633, 325);
+            textBox6.Name = "textBox6";
+            textBox6.Size = new Size(125, 27);
+            textBox6.TabIndex = 27;
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(502, 253);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(125, 27);
-            this.textBox4.TabIndex = 25;
+            textBox4.Location = new Point(633, 274);
+            textBox4.Name = "textBox4";
+            textBox4.Size = new Size(125, 27);
+            textBox4.TabIndex = 25;
+            textBox4.TextChanged += textBox4_TextChanged;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(226, 301);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(125, 27);
-            this.textBox2.TabIndex = 23;
+            textBox2.Location = new Point(357, 322);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(125, 27);
+            textBox2.TabIndex = 23;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(226, 250);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(125, 27);
-            this.textBox1.TabIndex = 22;
+            textBox1.Location = new Point(357, 271);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(125, 27);
+            textBox1.TabIndex = 22;
+            textBox1.TextChanged += textBox1_TextChanged;
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(816, 250);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(125, 27);
-            this.textBox3.TabIndex = 33;
+            textBox3.Location = new Point(998, 432);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(125, 27);
+            textBox3.TabIndex = 33;
+            textBox3.Visible = false;
+            textBox3.TextChanged += textBox3_TextChanged;
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(681, 256);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(114, 20);
-            this.label3.TabIndex = 34;
-            this.label3.Text = "Mã người dùng:";
+            label3.AutoSize = true;
+            label3.Location = new Point(998, 409);
+            label3.Name = "label3";
+            label3.Size = new Size(114, 20);
+            label3.TabIndex = 34;
+            label3.Text = "Mã người dùng:";
+            label3.Visible = false;
+            label3.Click += label3_Click;
             // 
             // Thongtingiangvien
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1144, 490);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.DeleGvien);
-            this.Controls.Add(this.UpdateGvien);
-            this.Controls.Add(this.AddGVien);
-            this.Controls.Add(this.GVienGrid);
-            this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "Thongtingiangvien";
-            this.Text = "Thongtingiangvien";
-            this.Load += new System.EventHandler(this.Thongtingiangvien_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.GVienGrid)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(1144, 490);
+            Controls.Add(label3);
+            Controls.Add(textBox3);
+            Controls.Add(label5);
+            Controls.Add(label4);
+            Controls.Add(label2);
+            Controls.Add(label1);
+            Controls.Add(textBox6);
+            Controls.Add(textBox4);
+            Controls.Add(textBox2);
+            Controls.Add(textBox1);
+            Controls.Add(DeleGvien);
+            Controls.Add(UpdateGvien);
+            Controls.Add(AddGVien);
+            Controls.Add(GVienGrid);
+            Margin = new Padding(2);
+            Name = "Thongtingiangvien";
+            Text = "Thongtingiangvien";
+            Load += Thongtingiangvien_Load;
+            ((System.ComponentModel.ISupportInitialize)GVienGrid).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

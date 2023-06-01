@@ -13,10 +13,20 @@ namespace DOAAn
     public partial class Diemsosinhvien : Form
     {
         BindingSource DiemListBindSource = new BindingSource();
+        Right license = null;
         public Diemsosinhvien()
         {
             InitializeComponent();
             LoadDiem();
+            LoadViewDiem();
+        }
+        public Diemsosinhvien(Right right)
+        {
+            license = right;
+            InitializeComponent();
+            AddButt.Hide();
+            DeleButt.Hide();
+            LoadDiem(right.AccountID);
             LoadViewDiem();
         }
 
@@ -32,8 +42,11 @@ namespace DOAAn
         }
         public void LoadDiem()
         {
-            DiemListBindSource.DataSource=DiemDAO.Instance.GetALLDiem();
-            
+            DiemListBindSource.DataSource = DiemDAO.Instance.GetALLDiem();
+        }
+        public void LoadDiem(string mangd)
+        {
+            DiemListBindSource.DataSource = DiemDAO.Instance.GetDiem(mangd);
         }
 
         private void Diemsosinhvien_Load(object sender, EventArgs e)
@@ -46,24 +59,23 @@ namespace DOAAn
             string ma = textBox4.Text;
             string diem = textBox3.Text;
             string mon = textBox6.Text;
-            if (DiemDAO.Instance.SuaDiem(ma,diem,mon))
+            if (DiemDAO.Instance.SuaDiem(ma, diem, mon))
             {
-                LoadDiem();
+                if (license == null)
+                    LoadDiem();
+                else
+                    LoadDiem(license.AccountID);
             }
-
         }
 
         private void DeleButt_Click(object sender, EventArgs e)
         {
 
             string ma = textBox4.Text;
-           
-
             if (DiemDAO.Instance.XoaDiem(ma))
             {
                 LoadDiem();
             }
-
         }
 
         private void AddButt_Click(object sender, EventArgs e)
@@ -72,13 +84,11 @@ namespace DOAAn
             string mssv = textBox5.Text;
             string mon = textBox6.Text;
             double diem = Double.Parse(textBox3.Text);
-            if (DiemDAO.Instance.ThemDiem(mact,mssv,diem,mon))
+            if (DiemDAO.Instance.ThemDiem(mact, mssv, diem, mon))
             {
                 LoadDiem();
             }
-
-
         }
     }
-    }
+}
 

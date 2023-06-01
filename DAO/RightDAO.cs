@@ -30,10 +30,10 @@ namespace DOAAn
             DataTable result = DataProvider.Instance.ExecuteQuery("exec CheckTk @name , @pass ", new object[] { userName, pass });
             if (result.Rows.Count > 0)
             {
-              Right right = new Right(result.Rows[0]);
+                Right right = new Right(result.Rows[0]);
                 return right;
             }
-            Right temp = new Right("-1", -1);
+            Right temp = new Right("-1", -1, "-1");
             return temp;
         }
 

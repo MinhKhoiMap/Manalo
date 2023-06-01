@@ -14,29 +14,33 @@ namespace DOAAn
     {
         private static DataProvider instance;
 
-        string path = $"Data Source={ConfigurationManager.AppSettings["ServerAddress"]};Initial Catalog=PhanQuyen;User ID={ConfigurationManager.AppSettings["Username"]};Password={ConfigurationManager.AppSettings["Password"]};Encrypt=True;TrustServerCertificate=True";
+        string path = $"Data Source={ConfigurationManager.AppSettings["ServerAddress"]};Initial Catalog=PhanQuyen;" +
+            $"User ID={ConfigurationManager.AppSettings["Username"]};" +
+            $"Password={ConfigurationManager.AppSettings["Password"]};Encrypt=True;TrustServerCertificate=True";
 
         public static DataProvider Instance
         {
             get
             {
-                if (instance == null) { instance = new DataProvider(); }
+                if (instance == null)
+                {
+                    instance = new DataProvider();
+                }
                 return instance;
             }
-            private set { instance = value; }
+            private set
+            {
+                instance = value;
+            }
         }
 
         public void ChangeString(string NewPath)
         {
             path = NewPath;
-
-
         }
-        public string  old()
+        public string old()
         {
-            return path ;
-
-
+            return path;
         }
 
         public DataTable ExecuteQuery(string query, object[] para = null)

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DOAAn
 {
-   public class DiemDAO
+    public class DiemDAO
     {
         private static DiemDAO instance;
 
@@ -32,16 +32,27 @@ namespace DOAAn
             }
             return list;
         }
+        public List<Diem> GetDiem(string mangd)
+        {
+            List<Diem> list = new List<Diem>();
+            DataTable result = DataProvider.Instance.ExecuteQuery($"exec getDiemSV_GV @mangd = {mangd}");
+            foreach (DataRow r in result.Rows)
+            {
+                Diem s = new Diem(r);
+                list.Add(s);
+            }
+            return list;
+        }
 
         public bool SuaDiem(string man, string ten, string mon)
         {
-            int res = DataProvider.Instance.ExecuteNonQuery("exec  SuaDiem @MaCT  , @Diem , @mamon   ", new object[] { man, ten , mon});
+            int res = DataProvider.Instance.ExecuteNonQuery("exec  SuaDiem @MaCT  , @Diem , @mamon   ", new object[] { man, ten, mon });
             return res > 0;
         }
 
-        public bool  ThemDiem(string mct,string mssv,double diem,string mamon)
+        public bool ThemDiem(string mct, string mssv, double diem, string mamon)
         {
-            int res = DataProvider.Instance.ExecuteNonQuery("exec ThemDiem  @machitiet , @mssv , @diem  , @mamon  ", new object[] { mct,mssv,diem,mamon });
+            int res = DataProvider.Instance.ExecuteNonQuery("exec ThemDiem  @machitiet , @mssv , @diem  , @mamon  ", new object[] { mct, mssv, diem, mamon });
             return res > 0;
         }
         public bool XoaDiem(string man)

@@ -16,9 +16,23 @@ namespace DOAAn
         private IconButton currentBtn;
         private Panel leftBorderBtn;
         private Form currentChildForm;
+        private Right license = null;
         //Constructor
         public Quanlisinhvien()
         {
+            InitializeComponent();
+            leftBorderBtn = new Panel();
+            leftBorderBtn.Size = new Size(7, 60);
+            panelMenu.Controls.Add(leftBorderBtn);
+            //Form
+            this.Text = string.Empty;
+            this.ControlBox = false;
+            this.DoubleBuffered = true;
+            this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+        }
+        public Quanlisinhvien(Right right)
+        {
+            license = right;
             InitializeComponent();
             leftBorderBtn = new Panel();
             leftBorderBtn.Size = new Size(7, 60);
@@ -100,18 +114,22 @@ namespace DOAAn
 
         }
 
-     
+
         private void iconButton1_Click_1(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color1);
-            OpenChildForm(new Danhsachsinhvien());
+            OpenChildForm(license == null 
+                            ? new Danhsachsinhvien()
+                            : new Danhsachsinhvien(license));
         }
 
         private void iconButton2_Click_1(object sender, EventArgs e)
         {
 
             ActivateButton(sender, RGBColors.color2);
-            OpenChildForm(new Diemsosinhvien());
+            OpenChildForm(license == null
+                            ? new Diemsosinhvien()
+                            : new Diemsosinhvien(license));
         }
     }
 }
