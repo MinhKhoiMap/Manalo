@@ -13,6 +13,7 @@ namespace DOAAn
 {
     public partial class LopHoc : Form
     {
+        string masv = null;
         public class RandomNumberGenerator
         {
             public static string GenerateRandomNumberAsString()
@@ -31,12 +32,20 @@ namespace DOAAn
             }
         }
         BindingSource LopListBindSource = new BindingSource();
-        public LopHoc()
+        public LopHoc(string masv)
         {
+            this.masv = masv;
             InitializeComponent();
-            LoadLopHoc();
-            LoadGridLopHoc();
-            LoadLopHocDaDangKy();
+            try
+            {
+                LoadLopHoc();
+                LoadGridLopHoc();
+                LoadLopHocDaDangKy();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
         public void LoadGridLopHoc()
         {
@@ -49,12 +58,12 @@ namespace DOAAn
 
         public void LoadLopHoc()
         {
-              LopListBindSource.DataSource = LopDAO.Instance.GetLop();
+            LopListBindSource.DataSource = LopDAO.Instance.GetLop();
 
         }
         public void LoadLopHocDaDangKy()
         {
-            dataGridView2.DataSource = DataProvider.Instance.ExecuteQuery("XemLopDaDangKy  @msv ",new object[] { "2" });
+            dataGridView2.DataSource = DataProvider.Instance.ExecuteQuery("XemLopDaDangKy  @msv ", new object[] { masv });
         }
         private void LopHoc_Load(object sender, EventArgs e)
         {
@@ -65,12 +74,21 @@ namespace DOAAn
         {
 
             string malop = textBox1.Text;
-            
 
-            if (LopDAO.Instance.AddLop("2",malop,RandomNumberGenerator.GenerateRandomNumberAsString()))
+            //masv
+            if (LopDAO.Instance.AddLop(masv, malop, RandomNumberGenerator.GenerateRandomNumberAsString()))
             {
-              LoadLopHoc();
-                LoadLopHocDaDangKy();
+                //LoadLopHoc();
+                //LoadLopHocDaDangKy();
+                try
+                {
+                    LoadLopHoc();
+                    LoadLopHocDaDangKy();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
         }
     }

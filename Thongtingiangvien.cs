@@ -23,8 +23,15 @@ namespace DOAAn
         public Thongtingiangvien(Right right, string mangd)
         {
             InitializeComponent();
-            LoadGVien(mangd);
-            LoadGridGiangVien();
+            try
+            {
+                LoadGVien(mangd);
+                LoadGridGiangVien();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         public Button AddGVien_TTGV

@@ -89,9 +89,9 @@ namespace DOAAn
                         }
                     }
                 }
-                
+
                 data = command.ExecuteNonQuery();
-                 
+
                 connection.Close();
                 SqlDataAdapter adapter = new SqlDataAdapter(command);
 
@@ -122,10 +122,10 @@ namespace DOAAn
                 command.ExecuteNonQuery();
 
                 connection.Close();
-              
+
 
             }
-           
+
         }
         public object ExecuteScalar(string query, object[] para = null)
         {

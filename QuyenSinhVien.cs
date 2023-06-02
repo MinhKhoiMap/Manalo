@@ -26,7 +26,6 @@ namespace DOAAn
         private void button2_Click(object sender, EventArgs e)
         {
             TraoQuyenDAO.Instance.SinhVienXemTHongTIN(0);
-
         }
 
         private void button4_Click(object sender, EventArgs e)

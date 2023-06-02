@@ -25,7 +25,14 @@ namespace DOAAn
         {
             InitializeComponent();
             license = right;
-            LoadSinhVien(right.AccountID);
+            try
+            {
+                LoadSinhVien(right.AccountID);
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
         }
         public void LoadGridSinhVien()
         {

@@ -21,7 +21,12 @@ namespace DOAAn
         {
             QuyenSinhVien form = new QuyenSinhVien();
             form.ShowDialog();
+        }
 
+        private void iconButton2_Click(object sender, EventArgs e)
+        {
+            QuyenGiangVien quyenGiangVien = new QuyenGiangVien();
+            quyenGiangVien.ShowDialog();
         }
     }
 }

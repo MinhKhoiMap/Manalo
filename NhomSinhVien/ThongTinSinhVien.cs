@@ -14,11 +14,20 @@ namespace DOAAn
     public partial class ThongTinSinhVien : Form
     {
         BindingSource InfoListBindSource = new BindingSource();
-        public ThongTinSinhVien()
+        string masv = null;
+        public ThongTinSinhVien(string masv)
         {
+            this.masv = masv;
             InitializeComponent();
-            LoadThongTin();
-            LoadGridThongTIn();
+            try
+            {
+                LoadThongTin();
+                LoadGridThongTIn();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
         public void LoadGridThongTIn()
         {
@@ -28,13 +37,11 @@ namespace DOAAn
             textBox3.DataBindings.Add(new Binding("Text", dataGridView1.DataSource, "Email", true, DataSourceUpdateMode.Never));
             textBox6.DataBindings.Add(new Binding("Text", dataGridView1.DataSource, "Sdt", true, DataSourceUpdateMode.Never));
             textBox5.DataBindings.Add(new Binding("Text", dataGridView1.DataSource, "Tenchuyennganh", true, DataSourceUpdateMode.Never));
-
         }
 
         public void LoadThongTin()
         {
-            InfoListBindSource.DataSource = ThongTinCaNhanDAO.Instance.getTHonTin("2");
-
+            InfoListBindSource.DataSource = ThongTinCaNhanDAO.Instance.getTHonTin(masv);
         }
         private void ThongTinSinhVien_Load(object sender, EventArgs e)
         {

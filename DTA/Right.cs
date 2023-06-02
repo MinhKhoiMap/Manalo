@@ -27,7 +27,6 @@ namespace DOAAn
             this.RightNum = num;
             this.connect = connect;
             this.accountID = accountID;
-
         }
 
     }

@@ -84,7 +84,7 @@ namespace DOAAn
 
         private void button6_Click(object sender, EventArgs e)
         {
-              OpenChildForm(new PhanQuyenFinal());
+            OpenChildForm(new PhanQuyenFinal());
         }
     }
 }

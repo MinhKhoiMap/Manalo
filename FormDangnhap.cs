@@ -52,7 +52,7 @@ namespace DOAAn
         {
             string manhom = license.RightNum.ToString();
             string path = license.Connect;
-
+            MessageBox.Show(path);
             SqlConnection sc = new SqlConnection(path);
             sc.Open();
             SqlCommand scmd = new SqlCommand($"exec getGroupName @manhom = {manhom}", sc);

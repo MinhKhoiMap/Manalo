@@ -26,8 +26,15 @@ namespace DOAAn
             InitializeComponent();
             AddButt.Hide();
             DeleButt.Hide();
-            LoadDiem(right.AccountID);
-            LoadViewDiem();
+            try
+            {
+                LoadDiem(right.AccountID);
+                LoadViewDiem();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         public void LoadViewDiem()

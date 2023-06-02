@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DOAAn.DAO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,14 +18,34 @@ namespace DOAAn
             InitializeComponent();
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void button4_Click(object sender, EventArgs e)
         {
-
+            TraoQuyenDAO.Instance.XemDanhSachSV(true);
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)
         {
+            TraoQuyenDAO.Instance.XemDanhSachSV(false);
+        }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            TraoQuyenDAO.Instance.XemTTGV(true);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            TraoQuyenDAO.Instance.XemTTGV(false);
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            TraoQuyenDAO.Instance.XemDiemSV(true);
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            TraoQuyenDAO.Instance.XemDiemSV(false);
         }
     }
 }
