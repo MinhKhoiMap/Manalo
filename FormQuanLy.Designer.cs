@@ -1,6 +1,6 @@
 ﻿namespace DOAAn
 {
-    partial class FormChinh
+    partial class FormQuanLy
     {
         /// <summary>
         /// Required designer variable.

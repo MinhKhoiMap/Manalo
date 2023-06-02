@@ -21,9 +21,8 @@ namespace DOAAn
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
-           LopHoc formChinh = new LopHoc();
+            LopHoc formChinh = new LopHoc();
             formChinh.ShowDialog();
-            
             this.Show();
         }
 
@@ -37,7 +36,6 @@ namespace DOAAn
             this.Hide();
             ThongTinSinhVien formChinh = new ThongTinSinhVien();
             formChinh.ShowDialog();
-
             this.Show();
         }
     }

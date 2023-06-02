@@ -69,7 +69,7 @@ namespace DOAAn
                 string old = DataProvider.Instance.old();
                 DataProvider.Instance.ChangeString(TempRight.Connect); 
                 /*mở form chính*/
-           FormChinh formChinh = new FormChinh(TempRight);
+           FormQuanLy formChinh = new FormQuanLy(TempRight);
                 formChinh.ShowDialog();
                 DataProvider.Instance.ChangeString(old);
                 this.Show();

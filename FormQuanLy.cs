@@ -11,11 +11,11 @@ using System.Windows.Forms;
 namespace DOAAn
 {
     
-    public partial class FormChinh : Form
+    public partial class FormQuanLy : Form
     {
         private Right right;
         private Form currentChildForm;
-        public FormChinh(Right right)
+        public FormQuanLy(Right right)
         {
             this.right = right;
     
