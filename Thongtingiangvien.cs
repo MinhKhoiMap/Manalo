@@ -27,6 +27,8 @@ namespace DOAAn
             {
                 LoadGVien(mangd);
                 LoadGridGiangVien();
+                textBox3.Hide();
+                label3.Hide();
             }
             catch (Exception ex)
             {
@@ -64,11 +66,8 @@ namespace DOAAn
             textBox1.DataBindings.Add(new Binding("Text", GVienGrid.DataSource, "Id", true, DataSourceUpdateMode.Never));
             textBox2.DataBindings.Add(new Binding("Text", GVienGrid.DataSource, "Ten", true, DataSourceUpdateMode.Never));
             textBox4.DataBindings.Add(new Binding("Text", GVienGrid.DataSource, "Email", true, DataSourceUpdateMode.Never));
-            //textBox3.DataBindings.Add(new Binding("Text", GVienGrid.DataSource, "Manguoidung", true, DataSourceUpdateMode.Never));
+            textBox3.DataBindings.Add(new Binding("Text", GVienGrid.DataSource, "Manguoidung", true, DataSourceUpdateMode.Never));
             textBox6.DataBindings.Add(new Binding("Text", GVienGrid.DataSource, "Sdt", true, DataSourceUpdateMode.Never));
-
-            textBox3.Hide();
-            label3.Hide();
         }
         private void Thongtingiangvien_Load(object sender, EventArgs e)
         {

@@ -95,7 +95,7 @@ namespace DOAAn
                 string old = DataProvider.Instance.old();
                 DataProvider.Instance.ChangeString(TempRight.Connect);
 
-                //Xác định form để mở - gọi tắt là hàm Render :))))
+                //Xác định form để mở - gọi tắt là hàm Render 
                 string group = getGroup(TempRight);
                 string tenform = $"Form{group}";
 
